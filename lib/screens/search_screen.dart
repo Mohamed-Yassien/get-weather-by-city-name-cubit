@@ -22,22 +22,6 @@ class SearchScreen extends StatelessWidget {
             decoration: InputDecoration(
               hintText: 'search',
               hintStyle: Theme.of(context).textTheme.caption,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(color: Colors.white, width: 1),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(color: Colors.white, width: 2),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(color: Colors.white54, width: 1),
-              ),
-              disabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(color: Colors.grey, width: 1),
-              ),
             ),
             onFieldSubmitted: (val) {
               context.read<WeatherCubit>().getWeather(cityName: val);
