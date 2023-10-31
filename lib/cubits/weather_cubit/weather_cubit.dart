@@ -24,4 +24,9 @@ class WeatherCubit extends Cubit<WeatherStates> {
       emit(GetWeatherErrorState());
     }
   }
+
+  double fahrenheitToCelsius(double fahrenheit) {
+  double celsius = fahrenheit - 273.15;
+  return celsius;
+}
 }

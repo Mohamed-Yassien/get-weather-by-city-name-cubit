@@ -18,7 +18,7 @@ class WeatherScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>const SearchScreen(),
+                  builder: (context) => const SearchScreen(),
                 ),
               );
             },
@@ -47,6 +47,10 @@ class WeatherScreen extends StatelessWidget {
                   ),
                   Text(
                     cubit.weatherModel!.name,
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
+                  Text(
+                    "${cubit.fahrenheitToCelsius(cubit.weatherModel!.temp!.toDouble()).floor()}",
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ],

@@ -4,11 +4,13 @@ class WeatherModel extends Equatable {
   final String main;
   final String description;
   final String name;
+  final dynamic temp;
 
   const WeatherModel({
     required this.main,
     required this.description,
     required this.name,
+    required this.temp,
   });
 
   @override
@@ -18,5 +20,6 @@ class WeatherModel extends Equatable {
         main: json['weather'][0]['main'],
         description: json['weather'][0]['description'],
         name: json['name'],
+        temp: json['main']["temp"],
       );
 }
